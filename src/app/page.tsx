@@ -299,7 +299,7 @@ function Rules({ close }: any) {
   </Shell>
 }
 
-function Spin({ close }: any) {
+function Spin({ close }: any) {}
   return <Shell title="☘️ Daily Free Play Spin" close={close}>
     <div className="text-center text-5xl">☘️</div>
     <h2 className="mt-4 text-center text-2xl font-bold">Daily spin is for active players</h2>
