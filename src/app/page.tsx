@@ -39,25 +39,25 @@ useEffect(() => {
 
   checkUser();
 }, []);
-  async function googleLogin() {
-    if (supabase) {
-      await supabase.auth.signInWithOAuth({
-        provider: "google",
-        options: { redirectTo: window.location.origin }
-      });
-  
+async function googleLogin() {
+  if (supabase) {
+    await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: { redirectTo: window.location.origin }
+    });
   }
+}
 
-  async function emailLogin() {
-    if (!email) return alert("Enter an email first.");
-    if (supabase) {
-      await supabase.auth.signInWithOtp({
-        email,
-        options: { emailRedirectTo: window.location.origin }
-      });
-      alert("Login link sent. Check your email.");
-   
+async function emailLogin() {
+  if (!email) return alert("Enter an email first.");
+  if (supabase) {
+    await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: window.location.origin }
+    });
+    alert("Login link sent. Check your email.");
   }
+}
 
   if (!loggedIn) {
     return (
