@@ -84,9 +84,9 @@ useEffect(() => {
             <div className="h-px flex-1 bg-zinc-800" /> or <div className="h-px flex-1 bg-zinc-800" />
           </div>
 
-          <label className="text-sm text-zinc-300">Login Email</label>
-          <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="mt-2 w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-4 outline-none focus:border-orange-500" />
-          <button onClick={emailLogin} className="mt-4 w-full rounded-xl bg-orange-500 py-4 font-semibold hover:bg-orange-400">Send Login Code</button>
+          <label className="text-sm text-zinc-300">Phone Number</label>
+          <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your phone number" className="mt-2 w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-4 outline-none focus:border-orange-500" />
+          <button onClick={emailLogin} className="mt-4 w-full rounded-xl bg-orange-500 py-4 font-semibold hover:bg-orange-400">Send Verification Code</button>
         </section>
       </main>
     );
