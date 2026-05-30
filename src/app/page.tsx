@@ -37,12 +37,18 @@ export default function Home() {
     checkUser();
   }, []);
 
-  async function googleLogin() {
-    await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo: window.location.origin },
-    });
+ async function googleLogin() {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: window.location.origin,
+    },
+  });
+
+  if (error) {
+    alert(error.message);
   }
+}
 
   async function emailLogin() {
     if (!email) return alert("Enter an email first.");
