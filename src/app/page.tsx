@@ -73,7 +73,7 @@ useEffect(() => {
             <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-orange-500/10 text-5xl">🐵</div>
             <p className="text-zinc-400">{BRAND}</p>
             <h1 className="mt-2 text-3xl font-bold">Customer Login</h1>
-            <p className="mt-4 text-zinc-400">Sign in with Google or use your email code.</p>
+            <p className="mt-4 text-zinc-400">Sign in with Google or receive a login code.</p>
           </div>
 
           <button onClick={googleLogin} className="mt-7 w-full rounded-xl border border-zinc-700 bg-zinc-900 py-4 font-semibold hover:bg-zinc-800">
@@ -84,8 +84,8 @@ useEffect(() => {
             <div className="h-px flex-1 bg-zinc-800" /> or <div className="h-px flex-1 bg-zinc-800" />
           </div>
 
-          <label className="text-sm text-zinc-300">Email address</label>
-          <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@email.com" className="mt-2 w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-4 outline-none focus:border-orange-500" />
+          <label className="text-sm text-zinc-300">Login Email</label>
+          <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="mt-2 w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-4 outline-none focus:border-orange-500" />
           <button onClick={emailLogin} className="mt-4 w-full rounded-xl bg-orange-500 py-4 font-semibold hover:bg-orange-400">Send Login Code</button>
         </section>
       </main>
