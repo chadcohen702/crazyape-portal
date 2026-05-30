@@ -45,10 +45,7 @@ useEffect(() => {
         provider: "google",
         options: { redirectTo: window.location.origin }
       });
-    } else {
-      setLoggedIn(true);
-      setModal("privacy");
-    }
+  
   }
 
   async function emailLogin() {
