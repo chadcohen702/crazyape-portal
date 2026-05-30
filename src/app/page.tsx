@@ -336,3 +336,4 @@ function GiveawayCard({ title, prize, days }: any) {
     <p className="mt-4"><a className="text-blue-700 underline">Join the VIP Group</a></p>
   </div>
 }
+}
