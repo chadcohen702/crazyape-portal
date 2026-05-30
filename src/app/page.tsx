@@ -50,11 +50,15 @@ async function googleLogin() {
 
 async function emailLogin() {
   if (!email) return alert("Enter an email first.");
+
   if (supabase) {
     await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: window.location.origin }
+      options: {
+        emailRedirectTo: window.location.origin,
+      },
     });
+
     alert("Login link sent. Check your email.");
   }
 }
