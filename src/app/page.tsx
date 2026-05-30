@@ -25,7 +25,20 @@ export default function Home() {
   const [modal, setModal] = useState<Modal>(null);
   const [walkStep, setWalkStep] = useState(1);
   const [dark, setDark] = useState(true);
+useEffect(() => {
+  const checkUser = async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
 
+    if (session) {
+      setLoggedIn(true);
+      setEmail(session.user.email || "");
+    }
+  };
+
+  checkUser();
+}, []);
   async function googleLogin() {
     if (supabase) {
       await supabase.auth.signInWithOAuth({
