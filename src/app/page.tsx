@@ -300,41 +300,53 @@ function Rules({ close }: any) {
   </Shell>
 }
 }
-function Spin({ close }: any) {}
-  return <Shell title="☘️ Daily Free Play Spin" close={close}>
-    <div className="text-center text-5xl">☘️</div>
-    <h2 className="mt-4 text-center text-2xl font-bold">Daily spin is for active players</h2>
-    <p className="mt-4 text-center text-zinc-300">How to unlock daily free play spin?</p>
-    <div className="mt-5 rounded-2xl bg-zinc-900 p-5 space-y-4">
-      <p><b className="rounded-full bg-orange-500 px-3 py-2">1</b> Make a deposit to your game/mobile ID and start playing.</p>
-      <p><b className="rounded-full bg-orange-500 px-3 py-2">2</b> Your spin appears here automatically.</p>
-      <p><b className="rounded-full bg-orange-500 px-3 py-2">3</b> Boom. You’ll be active. That easy.</p>
-    </div>
-    <p className="mt-5 text-center font-bold text-orange-300">Win up to $100 FreePlay Daily ☘️</p>
-    <button onClick={close} className="mt-6 w-full rounded-xl bg-orange-500 py-4 font-bold">Got it</button>
-  </Shell>
+function Spin({ close }: any) {
+  return (
+    <Shell title="🎡 Daily Free Play Spin" close={close} wide light>
+      <div className="rounded-2xl bg-yellow-950 p-6 text-center">
+        <h3 className="text-2xl font-bold text-yellow-300">Daily Spin Coming Soon 🎡</h3>
+        <p className="mt-3 text-zinc-300">
+          Check back for free play spin updates and daily rewards.
+        </p>
+        <button
+          onClick={close}
+          className="mt-6 rounded-xl bg-yellow-400 px-6 py-3 font-bold text-black"
+        >
+          Close
+        </button>
+      </div>
+    </Shell>
+  );
 }
 
 function Giveaway({ close }: any) {
-  return <Shell title="🎁 Giveaways" close={close} wide light>
-    <GiveawayCard title="Weekly Giveaway — 30 Winners!" prize="$750 Prize Pool — 30 winners get $25 each" days="00" />
-    <GiveawayCard title="Monthly Giveaway — 10 Winners!" prize="$10,000 Prize Pool — 10 winners get $1,000 each" days="02" />
-  </Shell>
+  return (
+    <Shell title="🎁 Giveaways" close={close} wide light>
+      <GiveawayCard
+        title="Weekly Giveaway — 30 Winners!"
+        prize="$750 Prize Pool"
+        days="7"
+      />
+      <GiveawayCard
+        title="Monthly Giveaway — 10 Winners!"
+        prize="$10,000 Prize Pool"
+        days="30"
+      />
+    </Shell>
+  );
 }
 
 function GiveawayCard({ title, prize, days }: any) {
-  return <div className="mb-6 rounded-2xl border border-yellow-400 bg-white p-6 text-center">
-    <h3 className="text-2xl font-bold text-yellow-800">🎉 {title} 🎉</h3>
-    <p className="mt-3 text-xl">{prize}</p>
-    <span className="mt-4 inline-block rounded-full border border-yellow-400 px-4 py-2 text-sm font-bold">GIVEAWAY LIVE</span>
-    <div className="mt-6 grid grid-cols-4 gap-3">
-      {[days, "19", "38", "14"].map((n, i) => <div key={i} className="rounded-xl border border-yellow-300 bg-zinc-50 p-4"><b className="text-3xl">{n}</b><br /><span className="text-xs">{["DAYS","HOURS","MINS","SECS"][i]}</span></div>)}
+  return (
+    <div className="mb-6 rounded-2xl border border-yellow-400 bg-white p-6 text-black">
+      <h3 className="text-2xl font-bold text-yellow-800">🎉 {title} 🎉</h3>
+      <p className="mt-3 text-xl">{prize}</p>
+      <p className="mt-3 text-zinc-700">{days} days remaining</p>
+      <div className="mt-5 rounded-xl border border-yellow-300 bg-yellow-50 p-4 text-sm">
+        <b>Ways to Earn Entries:</b>
+        <br />
+        Every $1 you deposit = 1 entry
+      </div>
     </div>
-    <div className="mt-5 rounded-xl border border-yellow-300 bg-yellow-50 p-4 text-left">
-      💰 <b>Ways to Earn Entries:</b><br />• Every $1 you deposit = <b>1 entry</b><br />• Entries are added automatically every time you deposit to play 🎮
-    </div>
-    <button className="mt-5 rounded-xl bg-yellow-400 px-8 py-4 font-bold">Deposit to Enter</button>
-    <p className="mt-4"><a className="text-blue-700 underline">Join the VIP Group</a></p>
-  </div>
+  );
 }
-
