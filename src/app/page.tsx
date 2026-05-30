@@ -298,7 +298,7 @@ function Rules({ close }: any) {
     {q.map((item) => <details key={item} className="mt-3 rounded-xl bg-white p-4"><summary className="cursor-pointer font-bold">{item}</summary><p className="mt-3 text-zinc-700">This answer can be edited to match your exact operating policy.</p></details>)}
   </Shell>
 }
-
+}
 function Spin({ close }: any) {}
   return <Shell title="☘️ Daily Free Play Spin" close={close}>
     <div className="text-center text-5xl">☘️</div>
@@ -336,4 +336,4 @@ function GiveawayCard({ title, prize, days }: any) {
     <p className="mt-4"><a className="text-blue-700 underline">Join the VIP Group</a></p>
   </div>
 }
-}
+
