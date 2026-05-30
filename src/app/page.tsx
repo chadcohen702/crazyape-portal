@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Gift, Moon, Clipboard, Clover, Send, Plus, X, Copy, Zap, CreditCard, Trophy } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
