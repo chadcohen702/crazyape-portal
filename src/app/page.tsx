@@ -56,10 +56,7 @@ useEffect(() => {
         options: { emailRedirectTo: window.location.origin }
       });
       alert("Login link sent. Check your email.");
-    } else {
-      setLoggedIn(true);
-      setModal("privacy");
-    }
+   
   }
 
   if (!loggedIn) {
